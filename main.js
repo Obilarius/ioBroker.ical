@@ -1516,7 +1516,6 @@ function displayDates() {
 }
 
 function insertSorted(arr, element) {
-  adapter.log.info("SASCHA", JSON.stringify(element));
   if (!arr.length) {
     arr.push(element);
   } else {
