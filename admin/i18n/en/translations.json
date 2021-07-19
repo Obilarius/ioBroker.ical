@@ -26,5 +26,7 @@
     "pass": "Password",
     "sslignore": "Ignore SSL errors",
     "url": "Calendar URL or file name",
-    "user": "Username"
+    "user": "Username",
+    "Organizer": "Organizer",
+    "character": "Character"
 }

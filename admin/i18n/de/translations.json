@@ -26,5 +26,7 @@
     "pass": "Passwort",
     "sslignore": "SSL-Fehler ignorieren",
     "url": "Kalender URL oder Dateiname",
-    "user": "Benutzername"
+    "user": "Benutzername",
+    "Organizer": "Organizator",
+    "character": "Zeichen"
 }
