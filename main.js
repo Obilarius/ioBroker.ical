@@ -1571,10 +1571,8 @@ function brSeparatedList(datesArray) {
       text += "<br/>\n";
     }
 
-    adapter.log.info("ORGA: ", datesArray[i]._organizer);
-
-    if (datesArray[i]._organizer === "Sascha Walzenbach") text += "<span style='color: blue'>S -</span>";
-    else if (datesArray[i]._organizer === "Anja Walzenbach") text += "<span style='color: pink'>A -</span>";
+    if (datesArray[i]._organizer === "Sascha Walzenbach") text += "<span style='color: cyan'>S -</span>";
+    else if (datesArray[i]._organizer === "Anja Walzenbach") text += "<span style='color: magenta'>A -</span>";
     else text += "<span style='color: white'>F -</span>";
 
     text +=
