@@ -1,3 +1,5 @@
+/* eslint-disable indent */
+/* eslint-disable quotes */
 /**
  *      ioBroker.iCal
  *      Copyright 2015-2020, bluefox <dogafox@gmail.com>
@@ -656,8 +658,6 @@ async function checkDates(ev, endpreview, startpreview, realnow, rule, calName, 
       // Add to list only if not hidden
       if (await checkForEvents(reason, ev, realnow)) {
         date = formatDate(ev.start, ev.end, true, false);
-
-        adapter.log.info("SASCHA", ev.description);
 
         insertSorted(datesArray, {
           date: date.text,
@@ -1516,6 +1516,7 @@ function displayDates() {
 }
 
 function insertSorted(arr, element) {
+  adapter.log.info("SASCHA", JSON.stringify(element));
   if (!arr.length) {
     arr.push(element);
   } else {
