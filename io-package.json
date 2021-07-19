@@ -1,6 +1,6 @@
 {
     "common": {
-        "name": "ical-test",
+        "name": "icaltest",
         "version": "1.10.0",
         "news": {
             "1.10.0": {
@@ -208,10 +208,10 @@
                 "zh-cn": "修复了禁用着色的 html\n"
             }
         },
-        "title": "iCal Calendar",
+        "title": "iCal Calendar Test",
         "titleLang": {
-            "en": "iCal Calendar",
-            "de": "iCal Kalender",
+            "en": "iCal Calendar Test",
+            "de": "iCal Kalender Test",
             "ru": "Календарь iCal",
             "pt": "Calendário iCal",
             "nl": "iCal-agenda",
