@@ -657,7 +657,7 @@ async function checkDates(ev, endpreview, startpreview, realnow, rule, calName, 
       if (await checkForEvents(reason, ev, realnow)) {
         date = formatDate(ev.start, ev.end, true, false);
 
-        adapter.log.log(JSON.stringify(ev));
+        adapter.log.info("SASCHA", JSON.stringify(ev));
 
         insertSorted(datesArray, {
           date: date.text,
