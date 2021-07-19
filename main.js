@@ -659,8 +659,8 @@ async function checkDates(ev, endpreview, startpreview, realnow, rule, calName, 
       if (await checkForEvents(reason, ev, realnow)) {
         date = formatDate(ev.start, ev.end, true, false);
 
-        console.log("ICAL_TEST: ");
-        console.log(ev);
+        adapter.log.info("ICAL_TEST: ");
+        adapter.log.info(ev);
 
         insertSorted(datesArray, {
           date: date.text,
