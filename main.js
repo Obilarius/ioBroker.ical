@@ -1571,9 +1571,9 @@ function brSeparatedList(datesArray) {
       text += "<br/>\n";
     }
 
-    if (datesArray[i]._organizer === "Sascha Walzenbach") text += "<span style='color: cyan'>S -</span>";
-    else if (datesArray[i]._organizer === "Anja Walzenbach") text += "<span style='color: magenta'>A -</span>";
-    else text += "<span style='color: white'>F -</span>";
+    if (datesArray[i]._organizer === "Sascha Walzenbach") text += "<span style='color: cyan'>S - </span>";
+    else if (datesArray[i]._organizer === "Anja Walzenbach") text += "<span style='color: magenta'>A - </span>";
+    else text += "<span style='color: white'>F - </span>";
 
     text +=
       xfix.prefix + date.text + xfix.suffix + " " + datesArray[i].event + "</span>" + (adapter.config.colorize ? "</span>" : "");
