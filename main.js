@@ -659,9 +659,6 @@ async function checkDates(ev, endpreview, startpreview, realnow, rule, calName, 
       if (await checkForEvents(reason, ev, realnow)) {
         date = formatDate(ev.start, ev.end, true, false);
 
-        adapter.log.info("ICAL_TEST: ");
-        adapter.log.info(ev.organizer.params.CN);
-
         insertSorted(datesArray, {
           date: date.text,
           event: reason,
@@ -678,6 +675,7 @@ async function checkDates(ev, endpreview, startpreview, realnow, rule, calName, 
           // add additional Objects, so iobroker.occ can use it
           _calName: calName,
           _calColor: adapter.config.calendars.find((x) => x.name === calName).color,
+          _organizer: ev.organizer.params.CN,
         });
 
         adapter.log.debug("Event with time added: " + JSON.stringify(rule) + " " + reason + " at " + date.text);
@@ -1572,6 +1570,11 @@ function brSeparatedList(datesArray) {
     if (text) {
       text += "<br/>\n";
     }
+
+    if (datesArray[i].organizer === "Sascha Walzenbach") text += "<span style='color: blue'>S -</span>";
+    else if (datesArray[i].organizer === "Anja Walzenbach") text += "<span style='color: pink'>A -</span>";
+    else text += "<span style='color: white'>F -</span>";
+
     text +=
       xfix.prefix + date.text + xfix.suffix + " " + datesArray[i].event + "</span>" + (adapter.config.colorize ? "</span>" : "");
   }
