@@ -660,7 +660,7 @@ async function checkDates(ev, endpreview, startpreview, realnow, rule, calName, 
         date = formatDate(ev.start, ev.end, true, false);
 
         adapter.log.info("ICAL_TEST: ");
-        adapter.log.info(ev);
+        adapter.log.info(ev.organizer.params.CN);
 
         insertSorted(datesArray, {
           date: date.text,
